@@ -1,0 +1,18 @@
+CDN : Content delivery network
+window.document in js 
+crossorigin
+
+//js to add html 
+<script>
+    const heading = document.createElement("h1");//creating h1 tag using js
+    heading.innerHTML = "Namaste Everyone from Javascript";//adding the text
+    const root = document.getElementById("root");//getting div container 
+    root.appendChild(heading);
+</script>
+
+first link of cdn react : React.createElement
+second link of cdn react : ReactDOM(the web version of react)/ as react is used for mobile applications applications
+
+react will over write whats inside the root
+-> async and defer
+-> >div>div>h1
