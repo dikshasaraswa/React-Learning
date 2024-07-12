@@ -1,4 +1,4 @@
-
+    
     //creating h1 tag using react 
     const heading1 = React.createElement("h1",{
         id:"title",
