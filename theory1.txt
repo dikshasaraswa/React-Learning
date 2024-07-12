@@ -1,8 +1,9 @@
+* //React is a library
 CDN : Content delivery network
 window.document in js 
 crossorigin
 
-//js to add html 
+* //js to add html 
 <script>
     const heading = document.createElement("h1");//creating h1 tag using js
     heading.innerHTML = "Namaste Everyone from Javascript";//adding the text
@@ -10,9 +11,27 @@ crossorigin
     root.appendChild(heading);
 </script>
 
-first link of cdn react : React.createElement
-second link of cdn react : ReactDOM(the web version of react)/ as react is used for mobile applications applications
+* first link of cdn react : React.createElement
+*second link of cdn react : ReactDOM(the web version of react)/ as react is used for mobile applications applications
 
-react will over write whats inside the root
+* react will over write whats inside the root
 -> async and defer
 -> >div>div>h1
+
+* //div="class" , these class,id are called prop and it can be anything for example hello="world";
+npm is used to manage package in our project  we can't build our peoject solely with react we need other packages also ,react is bundled with lot of things like we have to minify ,console etc
+
+* -D in (npm install -D parcel) means web dependency 
+
+* caret(^) and tilde(~) in package.json = they are used to indicate we want to upgard or not our version 
+package-lock tells us the exact version of library we are using
+
+* package-lock is a very imp file it locks the version u never have to keep it in .gitignore , it ensures that the version running on my system is exactly same as on the production. it maintain the integrity
+
+* node_modules is database for ur npm(parcel uses a lot of things to optimize our code)
+* our project has dependency on parcel and parcel has dependency on other packages.
+
+* npm install react is same as npm i react , npm gives a lot of short cut to us as install = i 
+* BUNDLERS : Vite, parcel ,webpack 
+
+* npx parcel index.html here npx means execute npm
