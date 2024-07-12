@@ -35,3 +35,4 @@ package-lock tells us the exact version of library we are using
 * BUNDLERS : Vite, parcel ,webpack 
 
 * npx parcel index.html here npx means execute npm
+* script can't be import or export , but we can export import modules 
