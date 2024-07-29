@@ -1,7 +1,7 @@
 import { restaurantList } from "../constants";
 import RestaurantCard from "./RestaurantCard";
 const Body = () => {
-    const searchTxt="kfc";
+    let searchTxt="kfc";
     return(
         <>
         <div className="search-container">
@@ -10,6 +10,9 @@ const Body = () => {
            className="search-input" 
            placeholder="Search" 
            value={searchTxt}
+           onChange = {(e) =>{
+            searchTxt = e.target.value;
+           }}
             />
             <button className="search-btn">Search</button>
         </div>
