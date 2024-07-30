@@ -6,7 +6,7 @@ export const IMG_CDN_URL =
 export const FETCH_MENU_URL =
   "https://www.swiggy.com/dapi/menu/v4/full?lat=12.9351929&lng=77.62448069999999&menuId=";
 
-export const restaurantList = [
+export const restaurantListString = `[
   {
     "info": {
       "id": "427150",
@@ -2007,4 +2007,6 @@ export const restaurantList = [
       "type": "WEBLINK"
     }
   }
-];
+]`;
+export const restaurantList = JSON.parse(restaurantListString);
+console.log(restaurantList);

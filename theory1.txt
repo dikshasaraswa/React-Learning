@@ -12,7 +12,7 @@ crossorigin
 </script>
 
 * first link of cdn react : React.createElement
-*second link of cdn react : ReactDOM(the web version of react)/ as react is used for mobile applications applications
+* second link of cdn react : ReactDOM(the web version of react)/ as react is used for mobile applications applications
 
 * react will over write whats inside the root
 -> async and defer
@@ -28,7 +28,8 @@ package-lock tells us the exact version of library we are using
 
 * package-lock is a very imp file it locks the version u never have to keep it in .gitignore , it ensures that the version running on my system is exactly same as on the production. it maintain the integrity
 
-* node_modules is database for ur npm(parcel uses a lot of things to optimize our code)
+* node_modules is database for ur npm(parcel uses a lot of things to optimize our code)/ node_modules is on server
+
 * our project has dependency on parcel and parcel has dependency on other packages.
 
 * npm install react is same as npm i react , npm gives a lot of short cut to us as install = i 
@@ -36,3 +37,100 @@ package-lock tells us the exact version of library we are using
 
 * npx parcel index.html here npx means execute npm
 * script can't be import or export , but we can export import modules 
+
+
+//PARCEL
+* HMR = Hot Module Replacement , it means parcel will keep track of whatever changes you    are making in ur file , that can be shown directly on the server i.e. live server
+* File watcher algorithm - C++ 
+* BUNDLING
+* MINIFY
+* Cleaning our code
+* Dev and production build 
+* super fast build algorithm
+* Images Optimization 
+* Caching while developement (1:52:22 lec-3)
+* Compression
+* Compatble with older version of browser
+* HTTPS on dev npx parcel index.html --https
+* port Number 
+* we should put .parcel-cache in our .gitignore(anything we can generate inside server will be put in .gitigmore)
+* Consistent Hashing Algorithm
+* react is fast why ? react uses parcel , parcel uses many dependencies
+* Zero Config
+* npx parcel index.html
+* npx parcel build index.html
+* Transitive dependencies 
+* Tree Shaking: removing Unwanted code
+* Visit Parcel website(Read it)
+
+*command to install parcel : npm i -D parcel -D used for devdependencies
+*command to execute our project: npx parcel index.html(entry point)
+* script types :developer.mozilla
+
+*pollyfill
+Array.map() // new code
+function myMap()// old code { babel converts new code to odd code, we have browserlist in package.json for that }
+we don't need to write pollyfill babel does it automatically 
+* parcel don't directly remove console.log ; the command used to remove console.log is 
+(npm install babel-plugin-transform-remove-console --save-dev)
+
+Inside a container tags like h1 & h2 should be given keys which uniquely identifies them
+
+* React.createElement => Object => HTML(DOM)
+
+* JSX : we want to write html using js , but codenof js becomes very compilcated 
+const heading = <h1> Namaste React </h1> {This is JSX}
+* Difference between html and JSX?
+* JSX can't run directly on browser console, JSX is executed using babel, babel understands JSX is not a package, its an syntax 
+* JSX => React.createElement => Object => HTML(DOM)
+* Advantages of JSX 
+* All the versions of(transitive dependencies) the contents of folder node_modules is updated by .package-lock-json present in the node_modules folder only.
+* React Component 
+functional - new , Class Based component - old
+names of component starts with capital letters.
+
+*  root.render(container) ----> rendering element 
+ root.render(<HeaderComponent/>); -----> render  functional component uses angular bracket 
+* any piece of js can be written inside jsx using curly bracket { }
+
+   //console.log(heading); a react element is a object 
+
+    //root.render(container);//passing a react element inside root
+
+* NPM INSTALL -D PARCEL
+* NPX PARCEL INDEX.HTML
+--------------------------------LEC 5-----------------------------------------------
+* lec -5 18;07 element function difference (title)
+
+* any piece of jSX u write there can only be one parent.
+* React.Fragment is a component which is exported by `import React from "react"`;( lec-5 52:37)
+* React.Fragment is a empty tag , short-cut for <React.Fragment></React.Fragment> ----> <></>
+
+* Inline Styling in JSX 1;04;04 JSX
+
+const styleObj = {
+        border:"1px solid red",
+    }
+//inline styling 
+    const jsx =(
+        <div style=
+        {{backgroundColor:"red",}}
+        >
+        <h1> JSX</h1>
+        <h1> Second JSX</h1>
+        </div>
+    );
+
+* Config Driven UI * Optional chaining 
+* in a function we pass aruguments and recieve parameters
+* props - 2:01:10 lec-5
+* for loop not used in industrial programming we use map 
+* virtual DOM -2:33:43 lec-5 {we need virtual DOM for reconciliation in REact, react uses reconciliation algo-> the algo react uses to diff one tree with another to determine which parts need to be changed , virtual DOM is virtual representaation of DOM }
+* Never use index as key
+
+
+--------------------------lec-6-------------------------------
+if your file name is Header.js then u can export by default the component with name Header (export default Header)
+and other component will be exported with name export that is ( export const Title = () => )
+* 20;16 name , default import 
+* one way data binding 
